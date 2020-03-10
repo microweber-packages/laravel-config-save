@@ -81,18 +81,13 @@ class ConfigSave extends Repository
 
     public function save($allowed = array())
     {
-
-        echo 1;
-        die();
         // Aggregating files array from changed keys
         $aggr = array();
         foreach ($this->changed_keys as $key => $value) {
             array_set($aggr, $key, $value);
         }
 
-        // $allow_in_cli = array('database', 'microweber');
         // Preparing data
-
         foreach ($aggr as $file => $items) {
             $path = $this->app->configPath() . '/' . $this->app->environment() . '/';
             if (!is_dir($path)) {

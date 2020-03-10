@@ -12,7 +12,9 @@
             "email": "bobi@microweber.com"
         }
   ],
-  "require": {},
+  "require": {
+        "microweber-packages/helper-functions": "*"
+    },
   "require-dev": {
       "orchestra/testbench": "4.*",
       "mockery/mockery": "*"

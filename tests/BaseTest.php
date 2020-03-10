@@ -14,6 +14,13 @@ abstract class BaseTest extends Orchestra\Testbench\TestCase
         return [\MicroweberPackages\Config\ConfigSaveServiceProvider::class];
     }
 
+    protected function getPackageAliases($app)
+    {
+        return [
+            'Config' => \MicroweberPackages\Config\ConfigSaveFacade::class
+        ];
+    }
+
     /**
      * Define environment setup.
      *

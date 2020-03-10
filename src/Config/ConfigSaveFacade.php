@@ -14,6 +14,6 @@ class ConfigSaveFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'ConfigSave';
+        return 'Config';
     }
 }
