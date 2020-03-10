@@ -11,17 +11,27 @@
             "name": "Bozhidar Slaveykov",
             "email": "bobi@microweber.com"
         }
-    ],
-    "require": {},
-    "require-dev": {
-        "orchestra/testbench": "4.*",
-        "mockery/mockery": "*"
-    },
-    "autoload": {
-	    "psr-4": {
-	      "MicroweberPackages\\": "src/"
-	    }
-	},
+  ],
+  "require": {},
+  "require-dev": {
+      "orchestra/testbench": "4.*",
+      "mockery/mockery": "*"
+  },
+  "autoload": {
+      "psr-4": {
+        "MicroweberPackages\\": "src/"
+      }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MicroweberPackages\\Config\\ConfigSaveServiceProvider"
+      ],
+      "aliases": {
+        "Config": "MicroweberPackages\\Config\\ConfigSaveFacade"
+      }
+    }
+  },
   "homepage": "http://microweber.com",
   "license": "MIT",
   "support": {

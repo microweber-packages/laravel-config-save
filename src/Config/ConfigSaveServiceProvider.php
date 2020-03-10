@@ -3,6 +3,11 @@ namespace MicroweberPackages\Config;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class ConfigSaveServiceProvider
+ * @package MicroweberPackages\Config
+ */
+
 class ConfigSaveServiceProvider extends ServiceProvider
 {
     /**
