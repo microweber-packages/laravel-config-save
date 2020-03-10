@@ -28,7 +28,7 @@
         "MicroweberPackages\\Config\\ConfigSaveServiceProvider"
       ],
       "aliases": {
-        "Config": "MicroweberPackages\\Config\\ConfigSaveFacade"
+        "ConfigSave": "MicroweberPackages\\Config\\ConfigSaveFacade"
       }
     }
   },

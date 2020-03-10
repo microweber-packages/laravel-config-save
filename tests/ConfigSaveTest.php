@@ -5,9 +5,11 @@ class ConfigSaveTest extends BaseTest
     public function testSimple()
     {
 
-        $get = Config::get('eho');
+        $save = ConfigSave::set('test','waw');
 
-        var_dump($get);
+        ConfigSave::save();
+
+        var_dump($save);
         die();
     }
 

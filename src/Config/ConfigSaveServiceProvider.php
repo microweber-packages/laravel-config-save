@@ -17,8 +17,10 @@ class ConfigSaveServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-		$this->app->bind('Config', function($app){
+		$this->app->bind('ConfigSave', function($app){
 			return new ConfigSave($app);
 		});
+
+        $this->app->alias('ConfigSave', ConfigSave::class);
     }
 }

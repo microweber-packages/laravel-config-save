@@ -2,19 +2,35 @@
 namespace MicroweberPackages\Config;
 
 use File;
+use Illuminate\Config\Repository;
 
-class ConfigSave 
+class ConfigSave extends Repository
 {
-    protected $beforeSave = [];
-    protected $changed_keys = array();
+    /**
+     * Laravel App Instance
+     * @var
+     */
     protected $app;
+
+    /**
+     * @var array
+     */
+    protected $beforeSave = [];
+
+    /**
+     * New keys for save
+     * @var array
+     */
+    protected $changedKeys = array();
 
     public function __construct($app)
     {
         $this->app = $app;
         $items = (array)$app->make('config');
         $items = end($items);
+
         parent::__construct($items);
+
         $this->init();
     }
 
@@ -65,6 +81,9 @@ class ConfigSave
 
     public function save($allowed = array())
     {
+
+        echo 1;
+        die();
         // Aggregating files array from changed keys
         $aggr = array();
         foreach ($this->changed_keys as $key => $value) {
